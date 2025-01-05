@@ -9,11 +9,16 @@
     <h1>Test text 577</h1>
 
     <form id="test_form">
-        <p></p>
-        <input type="button" value="submit">
+        <p id="p_id"></p>
+        <input type="submit">
     </form>
 
 
-    <script></script>
+    <script>
+        document.getElementById("test_form").addEventListener("submit", async function(event) {
+            event.preventDefault();
+            document.getElementById("p_id").textContent = "abc";
+        });
+    </script>
 </body>
 </html>
